@@ -97,8 +97,9 @@ http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
 - textarea 글자 입력 길이에 따라 textarea의 height 값이 변경되는 기능.
 - 텍스트 줄바꿈 또는 작성한 텍스트 수정할 때 textarea의 높이 값이 변경됩니다.
 ```
+![chatInput](https://user-images.githubusercontent.com/77766718/153698699-214c9b3f-1541-442d-aebb-380e0e559ac3.gif)
 
-![채팅 입력칸](https://user-images.githubusercontent.com/77766718/153690739-2141512d-454d-4eaa-a53c-dea1858b9e7b.gif)
+
 
 
 #### 4. nav바 및 side바 UI 구현
