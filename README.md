@@ -90,6 +90,8 @@ http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
 
 ```
 - redux를 이용하여, 메시지 Post,Delete 기능 구현
+- shift + enter는 줄바꿈 , enter는 메시지 보내기 기능 구분
+- 입력창이 빈칸일시 메시지 보내기 기능 작동안함.
 - 답장 버튼 누를시, 회신 메시지 
 - 채팅 입력 컴포넌트 UI 구현
 - textarea 글자 입력 길이에 따라 textarea의 height 값이 변경되는 기능.
