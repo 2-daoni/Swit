@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { MdManageSearch } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
 import { HiFolder } from 'react-icons/hi';
-
 import MessageContainer from 'components/MessageContainer/MessageContainer';
 import ChatInput from 'components/ChatInput/ChatInput';
 import MessageToolbar from 'components/MessageToolbar/MessageToolbar';
@@ -101,7 +100,7 @@ function Aside() {
           <MessageToolbar />
         </div>
         <div className='content-wrapper'>
-          <MessageContainer setMessage={setMessage} inputMessage={message}/>
+          <MessageContainer setMessage={setMessage} inputMessage={message} />
         </div>
         <ChatInput message={message} setMessage={setMessage} />
       </div>
