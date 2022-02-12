@@ -9,16 +9,60 @@
 ### 🏗 프로젝트 구조도
 
 ```html
-├── App.css ├── App.tsx ├── assets │ ├── assets.ts │ ├── main-logo.jpg │ ├── svg-icons.svg │ └──
-tab.svg ├── components │ ├── Aside │ │ ├── Aside.tsx │ │ └── style.scss │ ├── Auth │ │ ├──
-SignInTest.tsx │ │ └── style.scss │ ├── ChatInput │ │ ├── ChatInput.scss │ │ ├── ChatInput.tsx │ │
-├── TextArea.scss │ │ └── TextArea.tsx │ ├── MessageContainer │ │ ├── Message.scss │ │ ├──
-Message.tsx │ │ ├── MessageContainer.scss │ │ └── MessageContainer.tsx │ ├── MessageToolbar │ │ ├──
-MessageToolbar.scss │ │ └── MessageToolbar.tsx │ └── Nav │ ├── Navbar.tsx │ └── style.scss ├──
-index.css ├── index.tsx ├── react-app-env.d.ts ├── redux │ ├── actions │ │ ├── chatAction.ts │ │ └──
-userAction.ts │ ├── reducer │ │ ├── chatReducer.ts │ │ ├── index.ts │ │ └── userReducer.ts │ └──
-store.ts ├── types │ ├── message.ts │ ├── reduxTypes.ts │ └── user.ts └── utils ├── constants │ ├──
-chatData.ts │ └── userData.ts └── functions ├── generateMessage.ts ├── getDate.ts └── shortening.ts
+├── App.css
+├── App.tsx
+├── assets
+│   ├── assets.ts
+│   ├── main-logo.jpg
+│   ├── svg-icons.svg
+│   └── tab.svg
+├── components
+│   ├── Aside
+│   │   ├── Aside.tsx
+│   │   └── style.scss
+│   ├── Auth
+│   │   ├── SignInTest.tsx
+│   │   └── style.scss
+│   ├── ChatInput
+│   │   ├── ChatInput.scss
+│   │   ├── ChatInput.tsx
+│   │   ├── TextArea.scss
+│   │   └── TextArea.tsx
+│   ├── MessageContainer
+│   │   ├── Message.scss
+│   │   ├── Message.tsx
+│   │   ├── MessageContainer.scss
+│   │   └── MessageContainer.tsx
+│   ├── MessageToolbar
+│   │   ├── MessageToolbar.scss
+│   │   └── MessageToolbar.tsx
+│   └── Nav
+│       ├── Navbar.tsx
+│       └── style.scss
+├── index.css
+├── index.tsx
+├── react-app-env.d.ts
+├── redux
+│   ├── actions
+│   │   ├── chatAction.ts
+│   │   └── userAction.ts
+│   ├── reducer
+│   │   ├── chatReducer.ts
+│   │   ├── index.ts
+│   │   └── userReducer.ts
+│   └── store.ts
+├── types
+│   ├── message.ts
+│   ├── reduxTypes.ts
+│   └── user.ts
+└── utils
+    ├── constants
+    │   ├── chatData.ts
+    │   └── userData.ts
+    └── functions
+        ├── generateMessage.ts
+        ├── getDate.ts
+        └── shortening.ts
 ```
 
 ### :exclamation: 설치방법
@@ -31,6 +75,7 @@ chatData.ts │ └── userData.ts └── functions ├── generateMess
 ### :clapper: 구현내용
 
 #### 1. 채팅 메시지 입력 (자동 조절)
+![채팅 입력칸](https://user-images.githubusercontent.com/77766718/153690739-2141512d-454d-4eaa-a53c-dea1858b9e7b.gif)
 
 ```
 - textarea 글자 입력 길이에 따라 textarea의 height 값이 변경되는 기능.
