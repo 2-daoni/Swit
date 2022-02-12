@@ -9,16 +9,60 @@
 ### 🏗 프로젝트 구조도
 
 ```html
-├── App.css ├── App.tsx ├── assets │ ├── assets.ts │ ├── main-logo.jpg │ ├── svg-icons.svg │ └──
-tab.svg ├── components │ ├── Aside │ │ ├── Aside.tsx │ │ └── style.scss │ ├── Auth │ │ ├──
-SignInTest.tsx │ │ └── style.scss │ ├── ChatInput │ │ ├── ChatInput.scss │ │ ├── ChatInput.tsx │ │
-├── TextArea.scss │ │ └── TextArea.tsx │ ├── MessageContainer │ │ ├── Message.scss │ │ ├──
-Message.tsx │ │ ├── MessageContainer.scss │ │ └── MessageContainer.tsx │ ├── MessageToolbar │ │ ├──
-MessageToolbar.scss │ │ └── MessageToolbar.tsx │ └── Nav │ ├── Navbar.tsx │ └── style.scss ├──
-index.css ├── index.tsx ├── react-app-env.d.ts ├── redux │ ├── actions │ │ ├── chatAction.ts │ │ └──
-userAction.ts │ ├── reducer │ │ ├── chatReducer.ts │ │ ├── index.ts │ │ └── userReducer.ts │ └──
-store.ts ├── types │ ├── message.ts │ ├── reduxTypes.ts │ └── user.ts └── utils ├── constants │ ├──
-chatData.ts │ └── userData.ts └── functions ├── generateMessage.ts ├── getDate.ts └── shortening.ts
+├── App.css
+├── App.tsx
+├── assets
+│   ├── assets.ts
+│   ├── main-logo.jpg
+│   ├── svg-icons.svg
+│   └── tab.svg
+├── components
+│   ├── Aside
+│   │   ├── Aside.tsx
+│   │   └── style.scss
+│   ├── Auth
+│   │   ├── SignInTest.tsx
+│   │   └── style.scss
+│   ├── ChatInput
+│   │   ├── ChatInput.scss
+│   │   ├── ChatInput.tsx
+│   │   ├── TextArea.scss
+│   │   └── TextArea.tsx
+│   ├── MessageContainer
+│   │   ├── Message.scss
+│   │   ├── Message.tsx
+│   │   ├── MessageContainer.scss
+│   │   └── MessageContainer.tsx
+│   ├── MessageToolbar
+│   │   ├── MessageToolbar.scss
+│   │   └── MessageToolbar.tsx
+│   └── Nav
+│       ├── Navbar.tsx
+│       └── style.scss
+├── index.css
+├── index.tsx
+├── react-app-env.d.ts
+├── redux
+│   ├── actions
+│   │   ├── chatAction.ts
+│   │   └── userAction.ts
+│   ├── reducer
+│   │   ├── chatReducer.ts
+│   │   ├── index.ts
+│   │   └── userReducer.ts
+│   └── store.ts
+├── types
+│   ├── message.ts
+│   ├── reduxTypes.ts
+│   └── user.ts
+└── utils
+    ├── constants
+    │   ├── chatData.ts
+    │   └── userData.ts
+    └── functions
+        ├── generateMessage.ts
+        ├── getDate.ts
+        └── shortening.ts
 ```
 
 ### :exclamation: 설치방법
