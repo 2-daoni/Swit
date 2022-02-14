@@ -31,12 +31,6 @@ function Message({ message, user, deleteMessage, setMessage, inputMessage }: red
     setIsMouseOver(false);
   };
 
-  const messageDeleteHandler = (message: message) => () => {
-    deleteMessage(message);
-    isDeleteHandler();
-    hideFloatMenu();
-  };
-
   const replyHandler = () => {
     setMessage(`${message.userName}\n${content}\n(회신)\n${inputMessage}`);
   };
@@ -61,11 +55,13 @@ function Message({ message, user, deleteMessage, setMessage, inputMessage }: red
       <div>
         {isMouseOver && (
           <div className='chat-float-button'>
-            <div>
-              <button type='button' onClick={isDeleteHandler}>
-                삭제
-              </button>
-            </div>
+            {user.userName === message.userName && (
+              <div>
+                <button type='button' onClick={isDeleteHandler}>
+                  삭제
+                </button>
+              </div>
+            )}
             <div>
               <button type='button' onClick={replyHandler}>
                 답장
