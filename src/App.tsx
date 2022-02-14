@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
@@ -16,10 +15,6 @@ interface reduxProps {
   signOut: reduxSignOut;
 }
 function App({ user, signOut }: reduxProps) {
-  useEffect(() => {
-    console.log(user, '로그인중');
-  }, [user]);
-
   const signOutHandler = () => {
     signOut();
   };
