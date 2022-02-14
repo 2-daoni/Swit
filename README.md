@@ -1,46 +1,112 @@
-# Getting Started with Create React App
+<h1 align= "center"> Swit 메신저 구현 과제</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### :house: 배포 URL
+http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
+![캡쳐](https://user-images.githubusercontent.com/85682854/153686261-fc3e9267-b3e6-4183-807f-18e5dc3e0944.png)
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+### 🏗 프로젝트 구조도
 
-### `npm start`
+```html
+├── App.css
+├── App.tsx
+├── assets
+│   ├── assets.ts
+│   ├── main-logo.jpg
+│   ├── svg-icons.svg
+│   └── tab.svg
+├── components
+│   ├── Aside
+│   │   ├── Aside.tsx
+│   │   └── style.scss
+│   ├── Auth
+│   │   ├── SignInTest.tsx
+│   │   └── style.scss
+│   ├── ChatInput
+│   │   ├── ChatInput.scss
+│   │   ├── ChatInput.tsx
+│   │   
+│   │   
+│   ├── MessageContainer
+│   │   ├── Message.scss
+│   │   ├── Message.tsx
+│   │   ├── MessageContainer.scss
+│   │   └── MessageContainer.tsx
+│   ├── MessageToolbar
+│   │   ├── MessageToolbar.scss
+│   │   └── MessageToolbar.tsx
+│   └── Nav
+│       ├── Navbar.tsx
+│       └── style.scss
+├── index.css
+├── index.tsx
+├── react-app-env.d.ts
+├── redux
+│   ├── actions
+│   │   ├── chatAction.ts
+│   │   └── userAction.ts
+│   ├── reducer
+│   │   ├── chatReducer.ts
+│   │   ├── index.ts
+│   │   └── userReducer.ts
+│   └── store.ts
+├── types
+│   ├── message.ts
+│   ├── reduxTypes.ts
+│   └── user.ts
+└── utils
+    ├── constants
+    │   ├── chatData.ts
+    │   └── userData.ts
+    └── functions
+        ├── generateMessage.ts
+        ├── getDate.ts
+        └── shortening.ts
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### :exclamation: 설치방법
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+1. npm install
+2. npm start
+```
 
-### `npm test`
+### :clapper: 구현내용
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1. 대화목록 데이터 모델 구성
 
-### `npm run build`
+```
+- 메시지의 데이터 모델에는 userId, userName, profileImage, content, date
+- typescript를 이용하여 각각 데이터 모델에 type을 지정해 주었습니다.
+```
+#### 2. 로그인 유저 관리
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+- redux를 이용하여, 로그인 유저 상태 관리
+- 현재 로그인된 유저, 채팅창에서 *표시
+```
+#### 3. 채팅 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+- redux를 이용하여, 메시지 Post,Delete 기능 구현
+- shift + enter는 줄바꿈 , enter는 메시지 보내기 기능 구분
+- 입력창이 빈칸일시 메시지 보내기 기능 작동안함.
+- 답장 버튼 누를시, 회신 메시지 
+- 채팅 입력 컴포넌트 UI 구현
+- textarea 글자 입력 길이에 따라 textarea의 height 값이 변경되는 기능.
+- 텍스트 줄바꿈 또는 작성한 텍스트 수정할 때 textarea의 높이 값이 변경됩니다.
+```
+![채팅 기능](https://user-images.githubusercontent.com/77766718/153698875-9bcf2d93-435a-472c-882f-37c6df39ed77.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 4. nav바 및 side바 UI 구현
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+- nav바 및 aside바 전체 UI 구현
+- nav바에 로그인한 유저의 프로필 이미지가 표시됩니다.
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

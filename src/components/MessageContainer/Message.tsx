@@ -1,20 +1,22 @@
 import { useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { message } from 'types/message';
 import { shortening } from 'utils/functions/shortening';
 import { RootState } from 'redux/reducer';
 import { reduxUser } from 'types/reduxTypes';
+import { deleteMessage, deleteMessageAction } from 'redux/actions/chatAction';
 import './Message.scss';
 
 interface reduxProps {
   message: message;
   user: reduxUser;
-  deleteHandler: (message: message) => (e: React.MouseEvent<HTMLButtonElement>) => void;
   setMessage: React.Dispatch<React.SetStateAction<string>>;
+  deleteMessage: (message: message) => deleteMessageAction;
   inputMessage: string;
 }
 
-function Message({ message, user, deleteHandler, setMessage, inputMessage }: reduxProps) {
+function Message({ message, user, deleteMessage, setMessage, inputMessage }: reduxProps) {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const content = message.content.split('\n');
@@ -81,7 +83,7 @@ function Message({ message, user, deleteHandler, setMessage, inputMessage }: red
               </div>
             </div>
             <div className='button-wrap'>
-              <button onClick={deleteHandler(message)}>삭제하기</button>
+              <button onClick={messageDeleteHandler(message)}>삭제하기</button>
               <button onClick={isDeleteHandler} className='nobutton'>
                 취소
               </button>
@@ -93,6 +95,11 @@ function Message({ message, user, deleteHandler, setMessage, inputMessage }: red
   );
 }
 
-export default connect((state: RootState) => ({
-  user: state.userReducer.isLoggin,
-}))(Message);
+export default connect(
+  (state: RootState) => ({
+    user: state.userReducer.isLoggin,
+  }),
+  (dispatch: Dispatch) => ({
+    deleteMessage: (message: message) => dispatch(deleteMessage(message)),
+  })
+)(Message);
