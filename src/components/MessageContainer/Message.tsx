@@ -31,6 +31,12 @@ function Message({ message, user, deleteMessage, setMessage, inputMessage }: red
     setIsMouseOver(false);
   };
 
+  const messageDeleteHandler = (message: message) => () => {
+    deleteMessage(message);
+    isDeleteHandler();
+    hideFloatMenu();
+  };
+
   const replyHandler = () => {
     setMessage(`${message.userName}\n${content}\n(회신)\n${inputMessage}`);
   };
