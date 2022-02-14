@@ -30,7 +30,6 @@ function ChatInput({ user, postMessage, message, setMessage }: reduxProps) {
 
   const validMessage = (send: message) => {
     if (message.trim().split('<br>').join('') !== '') {
-      console.log(message.trim().split('<br>').join(''));
       postMessage(send);
       setMessage('');
     }
@@ -49,8 +48,6 @@ function ChatInput({ user, postMessage, message, setMessage }: reduxProps) {
     (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
-        console.log('제출', generateMessage(user as User, message));
-
         validMessage(generateMessage(user as User, message));
       }
     },

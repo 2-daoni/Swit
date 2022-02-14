@@ -38,7 +38,15 @@ function Message({ message, user, deleteMessage, setMessage, inputMessage }: red
   };
 
   const replyHandler = () => {
-    setMessage(`${message.userName}\n${content}\n(회신)\n${inputMessage}`);
+    const removeDeduplication = (prev: string) => {
+      if (prev.includes('(회신)\n')) {
+        let res = inputMessage.split('(회신)\n');
+        res.shift();
+        return `${message.userName}\n${content}\n(회신)\n${res}`;
+      }
+      return `${message.userName}\n${content}\n(회신)\n${inputMessage}`;
+    };
+    setMessage((prev) => removeDeduplication(prev));
   };
 
   return (
