@@ -74,9 +74,11 @@ http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
 
 ### :clapper: 구현내용
 
-
 #### 1. nav바 및 side바 UI 구현
+
 ![nav,side](https://user-images.githubusercontent.com/76942135/156170279-da8b1581-20b6-4bb7-ac91-393c2819da5c.PNG)
+
+
 ```
 - nav바 및 aside바 전체 UI 구현
 - nav바에 로그인한 유저의 프로필 이미지가 표시됩니다.
