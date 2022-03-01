@@ -74,19 +74,27 @@ http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
 
 ### :clapper: 구현내용
 
-#### 1. 대화목록 데이터 모델 구성
+
+#### 1. nav바 및 side바 UI 구현
+![nav,side](https://user-images.githubusercontent.com/76942135/156170279-da8b1581-20b6-4bb7-ac91-393c2819da5c.PNG)
+```
+- nav바 및 aside바 전체 UI 구현
+- nav바에 로그인한 유저의 프로필 이미지가 표시됩니다.
+```
+
+#### 2. 대화목록 데이터 모델 구성
 
 ```
 - 메시지의 데이터 모델에는 userId, userName, profileImage, content, date
 - typescript를 이용하여 각각 데이터 모델에 type을 지정해 주었습니다.
 ```
-#### 2. 로그인 유저 관리
+#### 3. 로그인 유저 관리
 
 ```
 - redux를 이용하여, 로그인 유저 상태 관리
 - 현재 로그인된 유저, 채팅창에서 *표시
 ```
-#### 3. 채팅 기능
+#### 4. 채팅 기능
 
 ```
 - redux를 이용하여, 메시지 Post,Delete 기능 구현
@@ -103,10 +111,5 @@ http://swit-team13.s3-website.ap-northeast-2.amazonaws.com
 
 
 
-#### 4. nav바 및 side바 UI 구현
 
-```
-- nav바 및 aside바 전체 UI 구현
-- nav바에 로그인한 유저의 프로필 이미지가 표시됩니다.
-```
 
